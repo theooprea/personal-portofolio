@@ -6,7 +6,7 @@
     (function($) {
     "use strict"; // Start of use strict
   
-    $('#carousel-id').carousel({ interval: 1000 });
+    $('#carousel-id').carousel({ interval: 4000 });
     $('#carousel-id').carousel('cycle');
     $('#carouselButton').click(function(){
         if($("#carouselButton").children('span').hasClass('fa-pause')) {

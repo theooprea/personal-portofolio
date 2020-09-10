@@ -41,15 +41,84 @@
       $("#portfolioModal6").modal('toggle');
     });
 
-    // Scroll to top button appear
-    $(document).scroll(function() {
-      var scrollDistance = $(this).scrollTop();
-      if (scrollDistance > 100) {
-        $('.scroll-to-top').fadeIn();
-      } else {
-        $('.scroll-to-top').fadeOut();
+    // hides the caption if the width has a certain value
+    $(window).on('resize', function () {
+      if($(window).width() <= 576) {
+        $(".carousel .caption").removeClass('carousel-caption').addClass('hidden'); 
+        $("#out-header").removeClass('hidden');
+        var currentIndex = $('div.active').index() + 1;
+        if(currentIndex == 1) {
+          $("#out-caption-1").removeClass('hidden');
+        }
+        else if(currentIndex == 2) {
+          $("#out-caption-2").removeClass('hidden');
+        }
+        else if(currentIndex == 3) {
+          $("#out-caption-3").removeClass('hidden');
+        }
+        else if(currentIndex == 4) {
+          $("#out-caption-4").removeClass('hidden');
+        }
+        else {
+          $("#out-caption-5").removeClass('hidden');
+        }
+      }
+      else{
+        $(".carousel .caption").removeClass('hidden').addClass('carousel-caption');
+        $("#out-header").addClass('hidden');
+        $("#out-caption-1").addClass('hidden');
+        $("#out-caption-2").addClass('hidden');
+        $("#out-caption-3").addClass('hidden');
+        $("#out-caption-4").addClass('hidden');
+        $("#out-caption-5").addClass('hidden');
       }
     });
+
+    if($(window).width() <= 576) {
+      $(".carousel .caption").removeClass('carousel-caption').addClass('hidden');
+      $("#out-header").removeClass('hidden');
+      /* $("#out-caption-1").addClass('hidden'); */
+      $("#out-caption-2").addClass('hidden');
+      $("#out-caption-3").addClass('hidden');
+      $("#out-caption-4").addClass('hidden');
+      $("#out-caption-5").addClass('hidden');
+    }
+    else{
+      $(".carousel .caption").removeClass('hidden').addClass('carousel-caption');
+      $("#out-header").addClass('hidden');
+      $("#out-caption-1").addClass('hidden');
+      $("#out-caption-2").addClass('hidden');
+      $("#out-caption-3").addClass('hidden');
+      $("#out-caption-4").addClass('hidden');
+      $("#out-caption-5").addClass('hidden');
+    }
+
+    $("#carousel-id").on('slid.bs.carousel', function() {
+      if($(window).width() <= 576) {
+        $("#out-caption-1").addClass('hidden');
+        $("#out-caption-2").addClass('hidden');
+        $("#out-caption-3").addClass('hidden');
+        $("#out-caption-4").addClass('hidden');
+        $("#out-caption-5").addClass('hidden');
+        var currentIndex = $('div.active').index() + 1;
+        if(currentIndex == 1) {
+          $("#out-caption-1").removeClass('hidden');
+        }
+        else if(currentIndex == 2) {
+          $("#out-caption-2").removeClass('hidden');
+        }
+        else if(currentIndex == 3) {
+          $("#out-caption-3").removeClass('hidden');
+        }
+        else if(currentIndex == 4) {
+          $("#out-caption-4").removeClass('hidden');
+        }
+        else {
+          $("#out-caption-5").removeClass('hidden');
+        }
+      }
+    });
+
   
     // Closes responsive menu when a scroll trigger link is clicked
     $('.js-scroll-trigger').click(function() {

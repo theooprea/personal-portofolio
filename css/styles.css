@@ -684,3 +684,9 @@ input, textarea, ::placeholder{
 .text-smaller {
   font-size: 200%!important;
 }
+.text-smaller-2 {
+  font-size: 150%!important;
+}
+.hidden {
+  display: none;
+}

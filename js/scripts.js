@@ -6,6 +6,8 @@
     (function($) {
     "use strict"; // Start of use strict
   
+    // code to modify the interval of the carousel as well as button to stop and start the carousel
+    // and code to open the modals with the help of jquery
     $('#carousel-id').carousel({ interval: 4000 });
     $('#carousel-id').carousel('cycle');
     $('#carouselButton').click(function(){

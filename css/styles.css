@@ -432,11 +432,13 @@ h1, h2 {
   }
 }
 #carouselButton {
-  right: 0px;
+  /* right: 0px;
   position: absolute;
   bottom: 0px;
-  z-index: 99;
-  cursor: pointer;
+  z-index: 99; */
+  position: relative;
+  z-index: 1;
+  bottom: 30px;
 }
 input, textarea, ::placeholder{
   background-color:#1abc9c!important;

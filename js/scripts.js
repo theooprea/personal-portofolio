@@ -9,6 +9,7 @@
     // code to modify the interval of the carousel as well as button to stop and start the carousel
     // and code to open the modals with the help of jquery
     $(document).ready(function() {
+      alert("ce pla mea")
       $('#carousel-id').carousel({ interval: 1000 });
       $('#carousel-id').carousel('cycle');
     });

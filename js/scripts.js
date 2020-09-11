@@ -8,18 +8,19 @@
   
     // code to modify the interval of the carousel as well as button to stop and start the carousel
     // and code to open the modals with the help of jquery
-    $('#carousel-id').carousel({ interval: 4000 });
+    $('#carousel-id').carousel({ interval: 1000 });
     $('#carousel-id').carousel('cycle');
-    $('#carouselButton').on('click tap', function() {
+    $('#carouselButton').on('click touchstart', function() {
         if($("#carouselButton").children('span').hasClass('fa-pause')) {
-            $('#carousel-id').carousel('pause');
-            $("#carouselButton").children('span').removeClass('fa-pause');
-            $("#carouselButton").children('span').addClass('fa-play');
+          $('#carousel-id').carousel('pause');
+          $("#carouselButton").children('span').removeClass('fa-pause');
+          $("#carouselButton").children('span').addClass('fa-play');
         }
         else {
-            $('#carousel-id').carousel('cycle');
-            $("#carouselButton").children('span').removeClass('fa-play');
-            $("#carouselButton").children('span').addClass('fa-pause');
+          $('#carousel-id').carousel('cycle');
+          $('#carousel-id').carousel({ interval: 4000 });
+          $("#carouselButton").children('span').removeClass('fa-play');
+          $("#carouselButton").children('span').addClass('fa-pause');
         }
     });
     $("#modal1").click(function() {

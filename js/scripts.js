@@ -10,7 +10,7 @@
     // and code to open the modals with the help of jquery
     $('#carousel-id').carousel({ interval: 4000 });
     $('#carousel-id').carousel('cycle');
-    $('#carouselButton').on('click touch', function() {
+    $('#carouselButton').on('click tap', function() {
         if($("#carouselButton").children('span').hasClass('fa-pause')) {
             $('#carousel-id').carousel('pause');
             $("#carouselButton").children('span').removeClass('fa-pause');

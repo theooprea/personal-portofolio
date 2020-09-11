@@ -12,7 +12,7 @@
       $('#carousel-id').carousel({ interval: 1000 });
       $('#carousel-id').carousel('cycle');
     });
-    $('#carouselButton').on('click touchstart', function() {
+    $('#carouselButton').on('click touch', function() {
         if($("#carouselButton").children('span').hasClass('fa-pause')) {
           alert("s-o oprit");
           $('#carousel-id').carousel('pause');
@@ -21,7 +21,6 @@
         }
         else {
           alert("s-o pornit iara");
-          $('#carousel-id').carousel({ interval: 4000 });
           $('#carousel-id').carousel('cycle');
           $("#carouselButton").children('span').removeClass('fa-play');
           $("#carouselButton").children('span').addClass('fa-pause');

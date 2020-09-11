@@ -10,7 +10,7 @@
     // and code to open the modals with the help of jquery
     $('#carousel-id').carousel({ interval: 4000 });
     $('#carousel-id').carousel('cycle');
-    $('#carouselButton').click(function(){
+    $('#carouselButton').on('click touchstart', function() {
         if($("#carouselButton").children('span').hasClass('fa-pause')) {
             $('#carousel-id').carousel('pause');
             $("#carouselButton").children('span').removeClass('fa-pause');
@@ -77,7 +77,6 @@
     if($(window).width() <= 576) {
       $(".carousel .caption").removeClass('carousel-caption').addClass('hidden');
       $("#out-header").removeClass('hidden');
-      /* $("#out-caption-1").addClass('hidden'); */
       $("#out-caption-2").addClass('hidden');
       $("#out-caption-3").addClass('hidden');
       $("#out-caption-4").addClass('hidden');

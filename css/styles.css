@@ -435,7 +435,7 @@ h1, h2 {
   right: 0px;
   position: absolute;
   bottom: 0px;
-  z-index: 1; 
+  z-index: 99; 
 }
 input, textarea, ::placeholder{
   background-color:#1abc9c!important;

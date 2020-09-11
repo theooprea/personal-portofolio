@@ -13,7 +13,7 @@
       $('#carousel-id').carousel({ interval: 1000 });
       $('#carousel-id').carousel('cycle');
     });
-    $('#carouselButton').on('click touch', function() {
+    $('#carouselButton').on('click tap', function() {
         if($("#carouselButton").children('span').hasClass('fa-pause')) {
           alert("s-o oprit");
           $('#carousel-id').carousel('pause');
